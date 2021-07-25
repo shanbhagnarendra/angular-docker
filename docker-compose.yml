@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+  angular-docker:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: develop
+    container_name: angular-docker
+    environment:
+      NODE_ENV: "development"
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./://usr/app/
