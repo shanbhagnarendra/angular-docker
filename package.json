@@ -1,11 +1,11 @@
 {
   "name": "angular-docker",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --progress=false",
-    "test": "ng test --watch=false --browsers=ChromeHeadless",
+    "test": "ng test --watch=false --browsers=ChromeHeadless  --reporters=junit",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
