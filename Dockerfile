@@ -3,6 +3,14 @@ FROM node:12-alpine as develop
 WORKDIR /usr/app
 RUN npm install -g @angular/cli@8.2.2
 
+RUN apk add --no-cache --virtual .gyp \
+        python \
+        make \
+        g++ \
+    && npm install \
+    && apk del .gyp
+
+
 ENV PATH /usr/app/node_modules/.bin:$PATH
 ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
