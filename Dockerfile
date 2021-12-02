@@ -4,7 +4,6 @@ WORKDIR /usr/app
 RUN npm install -g @angular/cli@8.2.2
 
 RUN apk add --no-cache --virtual .gyp \
-        python \
         make \
         g++ \
     && npm install \
